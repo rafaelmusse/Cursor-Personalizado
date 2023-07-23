@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="centerDiv">
+     <h2 data-text="AnimatedCursor!">AnimatedCursor!    </h2>
+    </div>
+    <div id="1" class="pointer"></div>
+    <div id="2" class="point1"></div>
+    <div id="2circle" class="point2"></div>
+    
+    <img src="./img/pikachuCursor.png" alt="" id="3" class="threePoint">
+
+    <img src="./img/pokebola.png" alt="" id="4" class="fourPoint">
+    
+    
+    
+    <div class="btnDiv">
+      <button type="button" id="pointer1">Tipo 1</button>
+      <button type="button" id="pointer2">Tipo 2</button>
+      <button type="button" id="pointer3">Tipo 3</button>
+      <button type="button" id="pointer4">Tipo 4</button>
+    </div>
+    
+
+    <script>
+        const pointer = document.querySelector(".pointer");
+        const point1 = document.querySelector(".point1");
+        const point2 = document.querySelector(".point2");
+        const point3 = document.querySelector(".threePoint");
+        const point4 = document.querySelector(".fourPoint");
+        let time;
+
+        const button1 = document.getElementById('pointer1');
+        const button2 = document.getElementById('pointer2');
+        const button3 = document.getElementById('pointer3');
+        const button4 = document.getElementById('pointer4');
+
+        
+
+        const pointer1 = document.getElementById('1');
+        const pointer2 = document.getElementById('2');
+        const pointer2circle = document.getElementById('2circle');
+        const pointer3 = document.getElementById('3');
+        const pointer4 = document.getElementById('4');
+
+        button1.addEventListener('click', () => {
+            pointer2.className = "";
+            pointer2circle.className = "";
+            pointer1.className = "pointer";
+            pointer4.style.display = "none"
+            pointer3.style.display = "none"
+        })
+
+        button2.addEventListener('click', () => {
+            pointer1.className = ""
+            pointer2.className = "point1"
+            pointer2circle.className = "point2"
+            pointer4.style.display = "none"
+            pointer3.style.display = "none"
+        })
+
+        button3.addEventListener('click', () => {
+            pointer1.className = ""
+            pointer2.className = ""
+            pointer2circle.className = ""
+            pointer4.style.display = "none"
+            pointer3.style.display = "block"
+
+        })
+
+        button4.addEventListener('click', () => {
+            pointer1.className = ""
+            pointer2.className = ""
+            pointer2circle.className = ""
+            pointer3.style.display = "none"
+            pointer4.style.display = "block"
+
+        })
+
+
+        document.addEventListener('mousemove', (e) => {
+            let locX = e.pageX;
+            let locY = e.pageY;
+
+            pointer.style.top = `${locY}px`;
+            pointer.style.left = `${locX}px`;
+            pointer.style.display = "block";
+
+            point1.style.top = `${locY}px`;
+            point1.style.left = `${locX}px`;
+            point2.style.top = `${locY}px`;
+            point2.style.left = `${locX}px`;
+
+            point3.style.top = `${locY}px`;
+            point3.style.left = `${locX}px`;
+
+            point4.style.top = `${locY}px`;
+            point4.style.left = `${locX}px`;
+            
+
+            const mouseStop = () => {
+                pointer.style.display = "none"
+            }
+            clearTimeout(time)
+            time = setTimeout(mouseStop, 3000);
+        });
+
+        document.addEventListener('mouseout', (e) => {
+            pointer.style.display = "none";
+        })
+
+        pointer2.className = "";
+        pointer2circle.className = "";
+        pointer3.style.display = "none"
+        pointer4.style.display = "none"
+
+    </script>
+</body>
+</html>
