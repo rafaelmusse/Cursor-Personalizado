@@ -6,9 +6,11 @@
 
 Muitos amigos me pediram para ensinar como personalizar e animar o cursor de um projeto ou site. Por esse motivo decidi fazer esse repositório para eles e a quem mais desejar aprender esse simples processo de modificar o cursor como bem entender. 
 
-- Primeiramente vou explicar a lógica por trás de como funciona a aplicação e como faremos.
-- Deixarei o projeto nesse repositório, caso desejarem, podem copiar a vontade ou modificá-lo para atender suas necessidades.
-- Vale dizer que esse projeto foi feito usando apenas JavaScript, CSS e HTML, sem nenhuma biblioteca externa. E funciona perfeitamente em React, Angular etc.
+<ul align="left">
+<li>Primeiramente vou explicar a lógica por trás de como funciona a aplicação e como faremos.</li>
+<li>Deixarei o projeto nesse repositório, caso desejarem, podem copiar a vontade ou modificá-lo para atender suas necessidades.</li>
+<li>Vale dizer que esse projeto foi feito usando apenas JavaScript, CSS e HTML, sem nenhuma biblioteca externa. E funciona perfeitamente em React, Angular etc.</li>
+<ul />
 
 ~~~javascript
  A lógica se consiste em fazer um container, seja uma div, uma imagem ou seja o que for para ser seu cursor ->
@@ -20,9 +22,20 @@ Muitos amigos me pediram para ensinar como personalizar e animar o cursor de um 
  Após feita essas modificações no CSS, uma ultima modificação é necessária, no css body ou * , adicionar cursor: none para esconder seu cursor nativo. ->
  Outras modificações são necessárias para melhor funcionamento, como fazer uma função para esconder o cursor caso ele saia da tela, mas fique tranquilo que explicarei tudo no passo a passo!
 ~~~
-
+<div align="left">
 1 Passo: Vamos criar um container, nesse caso uma Div para ser nosso cursor. ( Pode ser também uma imagem. )
+<br />
 ⬇️
-2 Passo: Vamos personalizar esse container 
+<br />
+2 Passo: Vamos personalizar esse container para ser nosso cursor, pode colocar border color e radius para fazer um circulo animado, ou utilizar uma IMG para ser seu cursor. ( Caso deseje, pode copiar um dos que fiz nesse repositorio. ) Lembre-se de colocar Position: Fixed e z-index: 999 ( para o objeto ter prioridade na order de aparecimento na tela. ) no CSS da div.
+<br / >
+ ⬇️
+ <br />
+ 3 Passo: Vamos criar um Eventlistener de "mousemove" e capturar um dos retornos, o eixo X e Y da posição exata do mouse, e aplicar no .style.top e .style.left de nossa div esse valor. ( Lembrando que a div precisa do atributo -> Position: Fixed, para poder se mover livremente pelos objetos da pagina.
+ <br />
+ ⬇️
+ <br />
+ 4 Passo:
+</div>
 
 
