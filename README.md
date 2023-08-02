@@ -35,7 +35,11 @@ Muitos amigos me pediram para ensinar como personalizar e animar o cursor de um 
  <br />
  ⬇️
  <br />
- 4 Passo:
+ 4 Passo: Adicionar o atributo cursor: none; em body ou * no CSS.
+ <br />
+ ⬇️
+ <br />
+ Em tese seu cursor estará pronto, porém existem outros mecanismos para melhorar ainda mais sua usabilidade: Função para desabilitar o cursor caso o mouse saia da tela com a propriedade display: none. Ou caso o mouse fique inativo por um determinado periodo de tempo, desabilitar a animação.
 </div>
 
 
