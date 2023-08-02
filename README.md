@@ -2,7 +2,9 @@
 
 <div align="center">
 <img src="https://i.imgur.com/G7LYPig.gif" alt="CursorGif" />
-<div / >
+<div />
+
+🔴   Para ver a aplicação ➡️ [Clique Aqui!](https://rafaelmusse.github.io/Cursor-Personalizado/)   🔴
 
 Muitos amigos me pediram para ensinar como personalizar e animar o cursor de um projeto ou site. Por esse motivo decidi fazer esse repositório para eles e a quem mais desejar aprender esse simples processo de modificar o cursor como bem entender. 
 
